@@ -12,4 +12,6 @@ Etape pour tester mon projet Authentification:
 
 5 - Lancez le serveur interne : php bin/console server:run
 
+6- Rendez-vous sur la page /login
+
 Vous pouvez à présent testez mon projet !
