@@ -1,0 +1,25 @@
+body{
+    background-image: url('fond_rouge.jpg');
+}
+
+.btn_login{
+    color:white;
+    background-color: red;
+    border-radius: 15px;
+    padding: 10px;
+    width: 150px;
+}
+
+.btn_login:hover{
+    opacity: .5;
+}
+
+.form{
+    border-radius: 5px;
+    background-color: white;
+    height: 300px;
+    margin-left: 380px;
+    margin-top: 50px;
+    width: 350px;
+    padding: 15px;
+}

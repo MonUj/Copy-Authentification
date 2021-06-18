@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ app.user.username }}!</h1>
+    {% if app.user %}
+        <div class="mb-3">
+            Tu est connecté en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
+        </div>
+    {% endif %}
+    <br>
+    <div class="text-center">
+        Tu t'est fait avoir par mon site ressemblant fortement à betclic !
+
+        Si tu souhaite toujours dépenser ton argent tu peux me faire un petit don par lydia au  06-23-81-62-82 :) !
+    </div>
+    <br>
+    <div class="text-center">
+        Sinon vu que tu n'est pas ici par hasard, je te conseille de mettre 20€ sur France vainqueur de l'euro 2021 ! 🇫🇷 
+    </div>
+</div>
+{% endblock %}

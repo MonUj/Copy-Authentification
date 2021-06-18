@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Betclic
+{% endblock %}
+
+{% block stylesheets %}
+   <link rel="icon" sizes="16x16" href="css/ico.png">
+   <link rel="stylesheet" href="{{ asset('css/site.css') }}">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">         
+{% endblock %}
+
+{% block body %}
+<nav class="navbar navbar-expand-sm bg-dark justify-content-center">
+ <br>
+ <br>
+ <br>
+ <img src="https://betclick.hs.llnwd.net/e1/page/c16/common/arjel-banner2.jpg">
+</nav>
+<div class="container pt-5">
+    <h1 class="mb-3 font-weight-bold text-center" style="color:white;"><i>Betclic</i></h1>
+        <form class="form" method="post">
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+            <h1 class="h3 mb-3 font-weight-bold text-center">Connexion</h1>
+            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus placeholder="Email ou pseudo">
+            <br>
+            <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required placeholder="Mot de passe">
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+            <br>
+            <div class="text-center">
+                <button class="btn_login btn-center" type="submit">
+                    Connexion
+                </button>
+            </div>
+        </form>
+</div>
+{% endblock %}
