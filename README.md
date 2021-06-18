@@ -14,4 +14,6 @@ Etape pour tester mon projet Authentification:
 
 6- Rendez-vous sur la page /login
 
+7- Tu as juste à prendre un e-mail dans la bdd et le mdp est : Pass1234@ pour se connecter
+
 Vous pouvez à présent testez mon projet !
